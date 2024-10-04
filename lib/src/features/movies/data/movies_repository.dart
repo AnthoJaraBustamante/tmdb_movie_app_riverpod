@@ -19,6 +19,7 @@ class MoviesRepository {
 
   Future<TMDBMoviesResponse> searchMovies(
       {required MoviesQueryData queryData, CancelToken? cancelToken}) async {
+ 
     final uri = Uri(
       scheme: 'https',
       host: 'api.themoviedb.org',

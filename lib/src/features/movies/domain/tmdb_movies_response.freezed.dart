@@ -28,8 +28,12 @@ mixin _$TMDBMoviesResponse {
   int get totalPages => throw _privateConstructorUsedError;
   List<String> get errors => throw _privateConstructorUsedError;
 
+  /// Serializes this TMDBMoviesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TMDBMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TMDBMoviesResponseCopyWith<TMDBMoviesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$TMDBMoviesResponseCopyWithImpl<$Res, $Val extends TMDBMoviesResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TMDBMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -116,6 +122,8 @@ class __$$TMDBMoviesResponseImplCopyWithImpl<$Res>
       $Res Function(_$TMDBMoviesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TMDBMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -209,7 +217,7 @@ class _$TMDBMoviesResponseImpl implements _TMDBMoviesResponse {
             const DeepCollectionEquality().equals(other._errors, _errors));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -219,7 +227,9 @@ class _$TMDBMoviesResponseImpl implements _TMDBMoviesResponse {
       totalPages,
       const DeepCollectionEquality().hash(_errors));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TMDBMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TMDBMoviesResponseImplCopyWith<_$TMDBMoviesResponseImpl> get copyWith =>
@@ -257,8 +267,11 @@ abstract class _TMDBMoviesResponse implements TMDBMoviesResponse {
   int get totalPages;
   @override
   List<String> get errors;
+
+  /// Create a copy of TMDBMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TMDBMoviesResponseImplCopyWith<_$TMDBMoviesResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

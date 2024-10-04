@@ -27,8 +27,12 @@ mixin _$TMDBMovie {
   @JsonKey(name: 'release_date')
   String? get releaseDate => throw _privateConstructorUsedError;
 
+  /// Serializes this TMDBMovie to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TMDBMovie
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TMDBMovieCopyWith<TMDBMovie> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$TMDBMovieCopyWithImpl<$Res, $Val extends TMDBMovie>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TMDBMovie
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,6 +113,8 @@ class __$$TMDBMovieBasicImplCopyWithImpl<$Res>
       _$TMDBMovieBasicImpl _value, $Res Function(_$TMDBMovieBasicImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TMDBMovie
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -177,12 +185,14 @@ class _$TMDBMovieBasicImpl implements _TMDBMovieBasic {
                 other.releaseDate == releaseDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, title, posterPath, releaseDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TMDBMovie
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TMDBMovieBasicImplCopyWith<_$TMDBMovieBasicImpl> get copyWith =>
@@ -218,8 +228,11 @@ abstract class _TMDBMovieBasic implements TMDBMovie {
   @override
   @JsonKey(name: 'release_date')
   String? get releaseDate;
+
+  /// Create a copy of TMDBMovie
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TMDBMovieBasicImplCopyWith<_$TMDBMovieBasicImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
